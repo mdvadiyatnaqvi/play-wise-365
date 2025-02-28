@@ -1,10 +1,11 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: white;
 }
 
 .main {
-    background-color: black;
-    height: 100vh;
+  background-color: black;
+  height: 100vh;
 }
