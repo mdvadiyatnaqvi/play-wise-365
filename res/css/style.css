@@ -9,3 +9,9 @@
   background-color: black;
   height: 100vh;
 }
+
+@media only screen and (max-width: 650px) {
+  .main {
+    height: 90vh;
+  }
+}
