@@ -2,25 +2,228 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Playwise - 365</title>
-    <link rel="stylesheet" href="./res/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win Big 3</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./airstrike/airstrike.ttf" />
+    <link rel="stylesheet" href="./res/css/style.css" />
+    <style>
+      .main {
+        background-image: url("./res/images/main-9.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+      }
+    </style>
   </head>
+
   <body>
-    <div class="main d-flex align-items-end">
-      <h1>Last</h1>
+    <div class="main" style="background-color: black">
+      <div class="strip">
+        <!-- <img src="./res/images/banner.png" class="img-fluid" alt=""> -->
+      </div>
+      <div class="container">
+        <div class="row w-100 fixed-div">
+          <!-- Left Side -->
+          <div
+            class="col-md-6 d-flex align-items-center justify-content-center text-center"
+            id="move-top"
+          >
+            <div>
+              <div class="bonus-box">
+                <h1 class="win-big">
+                  <p style="letter-spacing: 5px">KHEL222</p>
+                </h1>
+                <h3 style="font-weight: 700" class="main-para border-text">
+                  Bet, and win big with Aviator!
+                </h3>
+                <img
+                  src="./res/images/bonus-1.png"
+                  class="img-fluid"
+                  style="
+                    width: 250px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    margin-bottom: 5px;
+                  "
+                  alt=""
+                  id="bonusImg"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side -->
+          <div
+            class="col-md-6"
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <div class="login-box" style="padding: 50px 50px">
+              <h3
+                class="text-center"
+                style="font-weight: 700; padding-top: 20px"
+              >
+                Phone Verification
+              </h3>
+              <p
+                class="text-center text-muted another-para"
+                style="color: #000 !important"
+              >
+                Let's get you all set up!
+              </p>
+
+              <div class="mb-3">
+                <div class="input-group">
+                  <select
+                    class="form-select"
+                    id="countryCode"
+                    style="
+                      border-radius: 5px;
+                      height: 40px;
+                      background-color: #fff;
+                      border: 1px solid #939393;
+                      box-shadow: 1px 0px 2px 2px rgb(232, 208, 208);
+                    "
+                  >
+                    <option selected>IND</option>
+                    <option>USA</option>
+                    <option>UK</option>
+                  </select>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    class="form-control"
+                    placeholder="+91"
+                    style="
+                      margin-left: 10px;
+                      border-radius: 5px;
+                      height: 40px;
+                      width: 150px;
+                      background-color: #fff;
+                      border: 1px solid #939393;
+                      box-shadow: 1px 0px 2px 2px rgb(232, 208, 208);
+                    "
+                  />
+                </div>
+              </div>
+
+              <button
+                class="btn w-100"
+                style="
+                  margin: 20px 0 20px 0;
+                  padding: 5px;
+                  font-size: 14px;
+                  background-color: #ffd735;
+                "
+                id="request-otp"
+              >
+                Request OTP
+              </button>
+
+              <div class="sign-in">
+                <p>Already have an account? <a href="#">Sign In</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <a href="">Privacy Policy</a>
+      </div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
+    <!-- popup code starts here -->
+
+    <!-- The Modal -->
+    <div
+      class="modal fade"
+      id="signInModal"
+      tabindex="-1"
+      aria-labelledby="signInModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog"
+        style="
+          position: absolute;
+          top: 46%;
+          left: 48%;
+          transform: translate(-50%, -50%);
+        "
+      >
+        <!-- <div class="modal-content"> -->
+        <!-- <div class="modal-header"> -->
+        <!-- <h5 class="modal-title" id="signInModalLabel">Sign In</h5> -->
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <!-- </div> -->
+        <!-- <div class="modal-body"> -->
+        <div class="otp-box">
+          <div class="" style="display: flex; justify-content: flex-end">
+            <button
+              type="button"
+              class="btn-close"
+              style="background-color: white; border-radius: 25px"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <h4 style="color: #000">OTP Verification</h4>
+          <p style="font-size: 12px; color: #000">
+            We have sent an OTP on given number +91 <br />
+            <strong>8877655443</strong>
+          </p>
+          <div class="timer">03:00</div>
+
+          <div class="d-flex justify-content-center mt-3">
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+            <input type="text" maxlength="1" class="otp-input" />
+          </div>
+
+          <button
+            class="gradient-btn btn mt-3"
+            style="margin: 20px 0 20px 0 !important; background-color: #ffd735"
+          >
+            Verify & Login
+          </button>
+
+          <p class="mt-3" style="color: #000">
+            Already have an account?
+            <a href="#" class="sign-in-link">Sign In</a>
+          </p>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    </div>
+
+    <!-- popup code ends here -->
+
+    <!-- opt scritp starts here -->
+
+    <script>
+      const inputs = document.querySelectorAll(".otp-input");
+      inputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+          if (e.target.value && index < inputs.length - 1) {
+            inputs[index + 1].focus();
+          }
+        });
+      });
+    </script>
+
+    <!-- opt scritp ends here -->
     <script src="./res/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
