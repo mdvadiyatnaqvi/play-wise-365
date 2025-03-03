@@ -90,7 +90,7 @@
 
   .win-big svg {
     height: 160px !important;
-    margin-bottom: -70px !important;
+    /* margin-bottom: -70px !important; */
   }
 
   .login-box {
