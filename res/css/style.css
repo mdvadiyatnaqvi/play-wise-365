@@ -17,9 +17,10 @@
 }
 
 .login-box {
-  background: white;
-  color: black;
+  background: #494949a6;
+  color: white;
   padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.281);
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -200,7 +201,7 @@
   height: 40px;
   text-align: center;
   font-size: 18px;
-  border: 2px solid #ff0099;
+  border: 2px solid #0583fb;
   background: transparent;
   color: white;
   margin: 5px;
@@ -225,7 +226,7 @@
 }
 
 .sign-in-link {
-  color: #ff0099;
+  color: #0583fb;
   text-decoration: none;
 }
 
